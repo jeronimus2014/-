@@ -60,9 +60,9 @@ h1 {
 }
 
 @keyframes pulse {
-    0% { transform:scale(1); box-shadow:0 0 0 rgba(37,99,235,0.5); }
+    0% { transform:scale(1); box-shadow:0 0 0 rgba(37,99,235,0.4); }
     50% { transform:scale(1.08); box-shadow:0 0 12px rgba(37,99,235,0.6); }
-    100% { transform:scale(1); box-shadow:0 0 0 rgba(37,99,235,0.5); }
+    100% { transform:scale(1); box-shadow:0 0 0 rgba(37,99,235,0.4); }
 }
 
 .icon {
@@ -171,7 +171,9 @@ h1 {
 
     <div class="footer">
         Mobile Optimized • Indonesia
-        <div class="live">● 224 pengguna sedang melihat halaman ini</div>
+        <div class="live">
+            ● <span id="liveCount"></span> pengguna sedang melihat halaman ini
+        </div>
     </div>
 </div>
 
@@ -181,4 +183,23 @@ h1 {
 
 <script>
 function go(url){
-    document.getElementById("loading").style.display
+    document.getElementById("loading").style.display="flex";
+    setTimeout(function(){
+        window.location.href = url;
+    }, 700);
+}
+
+// Dynamische live viewer teller rond 224
+function generateLiveCount() {
+    const base = 224;
+    const variation = Math.floor(Math.random() * 35) - 15; 
+    return base + variation;
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    document.getElementById("liveCount").textContent = generateLiveCount();
+});
+</script>
+
+</body>
+</html>
