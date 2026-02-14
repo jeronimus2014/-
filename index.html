@@ -3,61 +3,71 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Rekomendasi Digital</title>
+<title>Digital Picks</title>
 
 <style>
 body {
     margin:0;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-    background:#ffffff;
-    color:#111111;
+    background:linear-gradient(135deg,#0f172a,#1e293b);
+    color:#ffffff;
 }
 
 .container {
     max-width:520px;
     margin:auto;
-    padding:60px 24px;
+    padding:50px 20px;
 }
 
 h1 {
     font-size:28px;
     font-weight:600;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
 .subtitle {
     font-size:14px;
-    color:#666;
-    margin-bottom:40px;
-    line-height:1.6;
+    color:#cbd5e1;
+    margin-bottom:35px;
 }
 
-.option {
-    padding:22px 0;
-    border-bottom:1px solid #eee;
-    cursor:pointer;
+.card {
+    background:#ffffff;
+    color:#111;
+    border-radius:18px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
     transition:0.2s ease;
+    cursor:pointer;
 }
 
-.option:hover {
-    opacity:0.6;
+.card:hover {
+    transform:translateY(-4px);
 }
 
-.option-title {
-    font-size:17px;
-    font-weight:500;
-    margin-bottom:4px;
+.card-title {
+    font-size:16px;
+    font-weight:600;
+    margin-bottom:6px;
 }
 
-.option-desc {
+.card-desc {
     font-size:13px;
-    color:#777;
+    color:#555;
+}
+
+.cta {
+    margin-top:12px;
+    font-size:13px;
+    font-weight:600;
+    color:#2563eb;
 }
 
 .footer {
-    margin-top:50px;
+    margin-top:40px;
     font-size:12px;
-    color:#aaa;
+    color:#94a3b8;
 }
 
 .overlay {
@@ -66,12 +76,12 @@ h1 {
     left:0;
     width:100%;
     height:100%;
-    background:#ffffff;
+    background:#0f172a;
     display:none;
     align-items:center;
     justify-content:center;
-    font-size:15px;
-    color:#444;
+    font-size:16px;
+    color:#ffffff;
 }
 </style>
 </head>
@@ -79,39 +89,42 @@ h1 {
 <body>
 
 <div class="container">
-    <h1>Rekomendasi Digital</h1>
-
+    <h1>Digital Picks</h1>
     <div class="subtitle">
-        Halaman ini menampilkan beberapa opsi digital yang sedang aktif.
-        Silakan pilih sesuai preferensi Anda.
+        Opsi digital terpilih berdasarkan aktivitas pengguna mobile.
+        Pilih sesuai minat Anda.
     </div>
 
-    <!-- OFFER 1 (Adsterra via Bemob) -->
-    <div class="option" onclick="go('PASTE_BEMOB_OFFER1_URL_HERE')">
-        <div class="option-title">Penghasilan Online</div>
-        <div class="option-desc">Solusi berbasis aktivitas pengguna terbaru.</div>
+    <!-- OFFER 1 -->
+    <div class="card" onclick="go('PASTE_BEMOB_OFFER1_URL_HERE')">
+        <div class="card-title">💰 Penghasilan Online</div>
+        <div class="card-desc">Platform digital berbasis aktivitas pengguna terbaru.</div>
+        <div class="cta">Lihat Detail →</div>
     </div>
 
-    <!-- OFFER 2 (Adsterra via Bemob) -->
-    <div class="option" onclick="go('PASTE_BEMOB_OFFER2_URL_HERE')">
-        <div class="option-title">Hiburan Interaktif</div>
-        <div class="option-desc">Pilihan santai dengan minat tinggi minggu ini.</div>
+    <!-- OFFER 2 -->
+    <div class="card" onclick="go('PASTE_BEMOB_OFFER2_URL_HERE')">
+        <div class="card-title">🎮 Hiburan Interaktif</div>
+        <div class="card-desc">Pilihan hiburan populer minggu ini.</div>
+        <div class="cta">Jelajahi →</div>
     </div>
 
-    <!-- OFFER 3 (Monetag via Bemob) -->
-    <div class="option" onclick="go('PASTE_BEMOB_OFFER3_URL_HERE')">
-        <div class="option-title">Aplikasi & Tools</div>
-        <div class="option-desc">Direkomendasikan untuk pengguna mobile.</div>
+    <!-- OFFER 3 -->
+    <div class="card" onclick="go('PASTE_BEMOB_OFFER3_URL_HERE')">
+        <div class="card-title">📱 Aplikasi & Tools</div>
+        <div class="card-desc">Direkomendasikan untuk pengguna Android.</div>
+        <div class="cta">Buka Opsi →</div>
     </div>
 
-    <!-- OFFER 4 (Monetag via Bemob) -->
-    <div class="option" onclick="go('PASTE_BEMOB_OFFER4_URL_HERE')">
-        <div class="option-title">Penawaran Digital</div>
-        <div class="option-desc">Akses ke opsi terbaru yang tersedia.</div>
+    <!-- OFFER 4 -->
+    <div class="card" onclick="go('PASTE_BEMOB_OFFER4_URL_HERE')">
+        <div class="card-title">🎁 Penawaran Digital</div>
+        <div class="card-desc">Akses ke opsi terbaru yang tersedia.</div>
+        <div class="cta">Lanjutkan →</div>
     </div>
 
     <div class="footer">
-        Disesuaikan untuk pengguna Indonesia • Mobile Optimized
+        Mobile Optimized • Indonesia
     </div>
 </div>
 
@@ -122,10 +135,9 @@ h1 {
 <script>
 function go(url){
     document.getElementById("loading").style.display="flex";
-
     setTimeout(function(){
         window.location.href = url;
-    }, 800);
+    }, 700);
 }
 </script>
 
