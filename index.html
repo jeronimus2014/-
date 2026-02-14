@@ -40,10 +40,34 @@ h1 {
     box-shadow:0 10px 25px rgba(0,0,0,0.25);
     transition:0.2s ease;
     cursor:pointer;
+    position:relative;
 }
 
 .card:hover {
     transform:translateY(-4px);
+}
+
+.badge {
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:#2563eb;
+    color:#fff;
+    font-size:11px;
+    padding:5px 8px;
+    border-radius:8px;
+    animation:pulse 2.2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform:scale(1); box-shadow:0 0 0 rgba(37,99,235,0.5); }
+    50% { transform:scale(1.08); box-shadow:0 0 12px rgba(37,99,235,0.6); }
+    100% { transform:scale(1); box-shadow:0 0 0 rgba(37,99,235,0.5); }
+}
+
+.icon {
+    font-size:22px;
+    margin-bottom:8px;
 }
 
 .card-title {
@@ -57,6 +81,12 @@ h1 {
     color:#555;
 }
 
+.stats {
+    font-size:12px;
+    color:#777;
+    margin-top:8px;
+}
+
 .cta {
     margin-top:12px;
     font-size:13px;
@@ -65,9 +95,16 @@ h1 {
 }
 
 .footer {
-    margin-top:40px;
+    margin-top:35px;
     font-size:12px;
     color:#94a3b8;
+    text-align:center;
+}
+
+.live {
+    margin-top:12px;
+    font-size:12px;
+    color:#22c55e;
 }
 
 .overlay {
@@ -97,34 +134,44 @@ h1 {
 
     <!-- OFFER 1 -->
     <div class="card" onclick="go('PASTE_BEMOB_OFFER1_URL_HERE')">
-        <div class="card-title">💰 Penghasilan Online</div>
+        <div class="badge">Top Choice</div>
+        <div class="icon">💰</div>
+        <div class="card-title">Penghasilan Online</div>
         <div class="card-desc">Platform digital berbasis aktivitas pengguna terbaru.</div>
+        <div class="stats">1.284 pengguna melihat minggu ini</div>
         <div class="cta">Lihat Detail →</div>
     </div>
 
     <!-- OFFER 2 -->
     <div class="card" onclick="go('PASTE_BEMOB_OFFER2_URL_HERE')">
-        <div class="card-title">🎮 Hiburan Interaktif</div>
+        <div class="icon">🎮</div>
+        <div class="card-title">Hiburan Interaktif</div>
         <div class="card-desc">Pilihan hiburan populer minggu ini.</div>
+        <div class="stats">986 pengguna aktif minggu ini</div>
         <div class="cta">Jelajahi →</div>
     </div>
 
     <!-- OFFER 3 -->
     <div class="card" onclick="go('PASTE_BEMOB_OFFER3_URL_HERE')">
-        <div class="card-title">📱 Aplikasi & Tools</div>
+        <div class="icon">📱</div>
+        <div class="card-title">Aplikasi & Tools</div>
         <div class="card-desc">Direkomendasikan untuk pengguna Android.</div>
+        <div class="stats">1.042 instalasi terbaru</div>
         <div class="cta">Buka Opsi →</div>
     </div>
 
     <!-- OFFER 4 -->
     <div class="card" onclick="go('PASTE_BEMOB_OFFER4_URL_HERE')">
-        <div class="card-title">🎁 Penawaran Digital</div>
+        <div class="icon">🎁</div>
+        <div class="card-title">Penawaran Digital</div>
         <div class="card-desc">Akses ke opsi terbaru yang tersedia.</div>
+        <div class="stats">754 pengguna mencoba hari ini</div>
         <div class="cta">Lanjutkan →</div>
     </div>
 
     <div class="footer">
         Mobile Optimized • Indonesia
+        <div class="live">● 224 pengguna sedang melihat halaman ini</div>
     </div>
 </div>
 
@@ -134,12 +181,4 @@ h1 {
 
 <script>
 function go(url){
-    document.getElementById("loading").style.display="flex";
-    setTimeout(function(){
-        window.location.href = url;
-    }, 700);
-}
-</script>
-
-</body>
-</html>
+    document.getElementById("loading").style.display
