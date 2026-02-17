@@ -1,34 +1,50 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="ms">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Digital Picks</title>
+<title>Perlindungan VPN Android</title>
 
 <style>
 body {
     margin:0;
     font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-    background:linear-gradient(135deg,#0f172a,#1e293b);
+    background:#0f172a;
     color:#ffffff;
 }
 
 .container {
-    max-width:520px;
+    max-width:480px;
     margin:auto;
-    padding:50px 20px;
+    padding:30px 20px;
+    text-align:center;
+}
+
+.status {
+    background:#dc2626;
+    padding:10px;
+    border-radius:10px;
+    font-size:13px;
+    font-weight:600;
+    margin-bottom:20px;
+    animation:pulse 1.8s infinite;
+}
+
+@keyframes pulse {
+    0% {opacity:1;}
+    50% {opacity:0.7;}
+    100% {opacity:1;}
 }
 
 h1 {
-    font-size:28px;
-    font-weight:600;
+    font-size:22px;
     margin-bottom:10px;
 }
 
 .subtitle {
     font-size:14px;
     color:#cbd5e1;
-    margin-bottom:35px;
+    margin-bottom:20px;
 }
 
 .card {
@@ -36,73 +52,65 @@ h1 {
     color:#111;
     border-radius:18px;
     padding:20px;
-    margin-bottom:20px;
-    box-shadow:0 10px 25px rgba(0,0,0,0.25);
-    transition:0.2s ease;
-    cursor:pointer;
-    position:relative;
-}
-
-.card:hover {
-    transform:translateY(-4px);
-}
-
-.badge {
-    position:absolute;
-    top:15px;
-    right:15px;
-    background:#2563eb;
-    color:#fff;
-    font-size:11px;
-    padding:5px 8px;
-    border-radius:8px;
-    animation:pulse 2.2s infinite;
-}
-
-@keyframes pulse {
-    0% { transform:scale(1); box-shadow:0 0 0 rgba(37,99,235,0.4); }
-    50% { transform:scale(1.08); box-shadow:0 0 12px rgba(37,99,235,0.6); }
-    100% { transform:scale(1); box-shadow:0 0 0 rgba(37,99,235,0.4); }
 }
 
 .icon {
-    font-size:22px;
-    margin-bottom:8px;
+    font-size:42px;
+    margin-bottom:10px;
 }
 
-.card-title {
-    font-size:16px;
-    font-weight:600;
-    margin-bottom:6px;
+.feature {
+    font-size:14px;
+    margin:5px 0;
 }
 
-.card-desc {
-    font-size:13px;
-    color:#555;
+.cta-btn {
+    margin-top:18px;
+    background:#22c55e;
+    color:#fff;
+    border:none;
+    padding:16px;
+    font-size:17px;
+    border-radius:14px;
+    cursor:pointer;
+    width:100%;
+    font-weight:700;
+    box-shadow:0 6px 18px rgba(0,0,0,0.25);
 }
 
-.stats {
-    font-size:12px;
-    color:#777;
-    margin-top:8px;
+.cta-btn:active {
+    transform:scale(0.97);
 }
 
-.cta {
-    margin-top:12px;
-    font-size:13px;
-    font-weight:600;
-    color:#2563eb;
+.trust {
+    margin-top:10px;
+    font-size:11px;
+    color:#15803d;
 }
 
-.footer {
-    margin-top:35px;
-    font-size:12px;
-    color:#94a3b8;
+.sticky {
+    position:fixed;
+    bottom:0;
+    left:0;
+    width:100%;
+    background:#111827;
+    padding:10px;
     text-align:center;
 }
 
+.sticky button {
+    background:#22c55e;
+    color:#fff;
+    border:none;
+    padding:14px;
+    width:90%;
+    border-radius:12px;
+    font-weight:700;
+    font-size:16px;
+}
+
 .live {
-    margin-top:12px;
+    margin-top:15px;
     font-size:12px;
     color:#22c55e;
 }
@@ -118,7 +126,6 @@ h1 {
     align-items:center;
     justify-content:center;
     font-size:16px;
-    color:#ffffff;
 }
 </style>
 </head>
@@ -126,59 +133,47 @@ h1 {
 <body>
 
 <div class="container">
-    <h1>Digital Picks</h1>
+
+    <div class="status">
+        ⚠ Sambungan Android anda tidak dilindungi
+    </div>
+
+    <h1>Lindungi Internet Anda Sekarang</h1>
+
     <div class="subtitle">
-        Opsi digital terpilih berdasarkan aktivitas pengguna mobile.
-        Pilih sesuai minat Anda.
+        Aktifkan VPN untuk keselamatan tambahan ketika menggunakan Wi-Fi awam.
     </div>
 
-    <!-- OFFER 1 -->
-    <div class="card" onclick="go('PASTE_BEMOB_OFFER1_URL_HERE')">
-        <div class="badge">Top Choice</div>
-        <div class="icon">💰</div>
-        <div class="card-title">Penghasilan Online</div>
-        <div class="card-desc">Platform digital berbasis aktivitas pengguna terbaru.</div>
-        <div class="stats">1.284 pengguna melihat minggu ini</div>
-        <div class="cta">Lihat Detail →</div>
-    </div>
+    <div class="card">
+        <div class="icon">🔐</div>
 
-    <!-- OFFER 2 -->
-    <div class="card" onclick="go('PASTE_BEMOB_OFFER2_URL_HERE')">
-        <div class="icon">🎮</div>
-        <div class="card-title">Hiburan Interaktif</div>
-        <div class="card-desc">Pilihan hiburan populer minggu ini.</div>
-        <div class="stats">986 pengguna aktif minggu ini</div>
-        <div class="cta">Jelajahi →</div>
-    </div>
+        <div class="feature">✔ Keselamatan tambahan</div>
+        <div class="feature">✔ Privasi lebih baik</div>
+        <div class="feature">✔ Akses tanpa sekatan</div>
 
-    <!-- OFFER 3 -->
-    <div class="card" onclick="go('PASTE_BEMOB_OFFER3_URL_HERE')">
-        <div class="icon">📱</div>
-        <div class="card-title">Aplikasi & Tools</div>
-        <div class="card-desc">Direkomendasikan untuk pengguna Android.</div>
-        <div class="stats">1.042 instalasi terbaru</div>
-        <div class="cta">Buka Opsi →</div>
-    </div>
+        <button class="cta-btn" onclick="go('PASTE_BEMOB_OFFER_URL_HERE')">
+            Aktifkan VPN Sekarang
+        </button>
 
-    <!-- OFFER 4 -->
-    <div class="card" onclick="go('PASTE_BEMOB_OFFER4_URL_HERE')">
-        <div class="icon">🎁</div>
-        <div class="card-title">Penawaran Digital</div>
-        <div class="card-desc">Akses ke opsi terbaru yang tersedia.</div>
-        <div class="stats">754 pengguna mencoba hari ini</div>
-        <div class="cta">Lanjutkan →</div>
-    </div>
-
-    <div class="footer">
-        Mobile Optimized • Indonesia
-        <div class="live">
-            ● <span id="liveCount"></span> pengguna sedang melihat halaman ini
+        <div class="trust">
+            ✔ Android disokong • Pemasangan pantas
         </div>
     </div>
+
+    <div class="live">
+        ● <span id="liveCount"></span> pengguna sedang mengaktifkan perlindungan
+    </div>
+
+</div>
+
+<div class="sticky">
+    <button onclick="go('PASTE_BEMOB_OFFER_URL_HERE')">
+        Aktifkan Sekarang
+    </button>
 </div>
 
 <div class="overlay" id="loading">
-    Mengalihkan ke pilihan Anda...
+    Menghubungkan ke aplikasi VPN...
 </div>
 
 <script>
@@ -186,13 +181,12 @@ function go(url){
     document.getElementById("loading").style.display="flex";
     setTimeout(function(){
         window.location.href = url;
-    }, 700);
+    }, 500);
 }
 
-// Dynamische live viewer teller rond 224
 function generateLiveCount() {
-    const base = 224;
-    const variation = Math.floor(Math.random() * 35) - 15; 
+    const base = 186;
+    const variation = Math.floor(Math.random() * 20) - 10;
     return base + variation;
 }
 
